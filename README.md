@@ -1,19 +1,29 @@
 # ElixirTweet
 
-**TODO: Add description**
+[playground] Schedule tweets from elixir
 
-## Installation
+## Running locally
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `elixir_tweet` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [{:elixir_tweet, "~> 0.1.0"}]
-end
+Clone the repo
+```bash
+git clone git@github.com:uesteibar/elixir-tweet.git
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/elixir_tweet](https://hexdocs.pm/elixir_tweet).
+Install the dependencies
+```bash
+cd elixir-tweet
+mix deps.get
+```
 
+copy the `.env` file
+```bash
+cp .env.sample .env
+```
+And fill it with your twitter application keys.
+
+You can add the tweets to the [sample](https://github.com/uesteibar/elixir-tweet/blob/master/priv/input/sample.txt) file, separated by a line break.
+
+To run the app
+```bash
+mix run --no-halt
+```
